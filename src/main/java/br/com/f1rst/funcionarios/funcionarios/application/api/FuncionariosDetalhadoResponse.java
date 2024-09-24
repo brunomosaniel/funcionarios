@@ -4,6 +4,7 @@ import br.com.f1rst.funcionarios.funcionarios.domain.Funcionarios;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Value;
 
+import java.time.LocalDateTime;
 import java.util.UUID;
 @Value
 public class  FuncionariosDetalhadoResponse {
@@ -13,6 +14,7 @@ public class  FuncionariosDetalhadoResponse {
     private String salario;
     private String telefone;
     private String endereco;
+    private LocalDateTime dataHoraDoCadastro;
 
     public FuncionariosDetalhadoResponse(Funcionarios funcionarios) {
         this.idFuncionarios = funcionarios.getIdFuncionarios();
@@ -21,5 +23,6 @@ public class  FuncionariosDetalhadoResponse {
         this.salario = funcionarios.getSalario();
         this.telefone = funcionarios.getTelefone();
         this.endereco = funcionarios.getEndereco();
+        this.dataHoraDoCadastro = funcionarios.getDataHoraDoCadastro();
     }
 }

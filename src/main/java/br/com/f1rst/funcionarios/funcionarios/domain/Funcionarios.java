@@ -8,6 +8,7 @@ import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
@@ -29,6 +30,11 @@ public class Funcionarios {
     @NotBlank
     private String endereco;
 
+    private LocalDateTime dataHoraDoCadastro;
+    private LocalDateTime getDataHoraDaUltimaAlteracao;
+
+
+
 
     public Funcionarios(FuncionariosRequest funcionariosRequest) {
         this.nomeFuncionarios = funcionariosRequest.getNomeFuncionarios();
@@ -36,6 +42,8 @@ public class Funcionarios {
         this.salario = funcionariosRequest.getSalario();
         this.telefone = funcionariosRequest.getTelefone();
         this.endereco = funcionariosRequest.getEndereco();
+        this.dataHoraDoCadastro = LocalDateTime.now();
+
     }
 
 
@@ -45,5 +53,6 @@ public class Funcionarios {
         this.salario = funcionariosAlteracaoResquet.getSalario();
         this.telefone = funcionariosAlteracaoResquet.getTelefone();
         this.endereco = funcionariosAlteracaoResquet.getEndereco();
+        this.getDataHoraDaUltimaAlteracao = LocalDateTime.now();
     }
 }
