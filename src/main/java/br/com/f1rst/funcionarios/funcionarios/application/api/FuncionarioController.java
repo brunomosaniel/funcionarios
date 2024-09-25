@@ -47,7 +47,6 @@ public class FuncionarioController implements FuncionariosAPI {
         log.info("[idFuncionarios] {} ", idFuncionarios);
         funcionarioService.deletaFuncionariosAtravesid(idFuncionarios);
         log.info("[finish] funcionarioController - deletaFuncionariosAtravesId");
-
     }
 
     @Override

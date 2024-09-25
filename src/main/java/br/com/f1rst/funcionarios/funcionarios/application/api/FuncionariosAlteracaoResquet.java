@@ -15,6 +15,4 @@ public class FuncionariosAlteracaoResquet {
     private String telefone;
     @NotBlank
     private String endereco;
-
-
 }
