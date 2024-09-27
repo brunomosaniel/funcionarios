@@ -13,7 +13,6 @@ import java.util.UUID;
 @Log4j2
 @RequiredArgsConstructor
 public class FuncionarioController implements FuncionariosAPI {
-
     private final FuncionarioService funcionarioService;
 
     @Override

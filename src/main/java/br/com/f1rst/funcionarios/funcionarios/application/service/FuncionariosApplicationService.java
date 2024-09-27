@@ -58,6 +58,6 @@ public class FuncionariosApplicationService implements FuncionarioService {
         Funcionarios funcionarios = funcionariosRepository.buscaFuncionariosAtravesId(idFuncionarios);
         funcionarios.altera(funcionariosAlteracaoResquet);
         funcionariosRepository.salva(funcionarios);
-        log.info("[start] FuncionariosApplicationService - patchAlteraFuncionarios");
+        log.info("[finish] FuncionariosApplicationService - patchAlteraFuncionarios");
     }
 }

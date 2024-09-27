@@ -11,13 +11,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/")
 public class FuncionariosApplication {
 
-	public String getHomeTeste(){
+	@GetMapping
+	public String getHomeTeste() {
 		return "Funcionarios - API HOME";
 	}
-
 
 	public static void main(String[] args) {
 		SpringApplication.run(FuncionariosApplication.class, args);
 	}
-
 }

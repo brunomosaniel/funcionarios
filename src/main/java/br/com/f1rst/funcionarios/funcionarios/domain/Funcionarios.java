@@ -33,9 +33,6 @@ public class Funcionarios {
     private LocalDateTime dataHoraDoCadastro;
     private LocalDateTime getDataHoraDaUltimaAlteracao;
 
-
-
-
     public Funcionarios(FuncionariosRequest funcionariosRequest) {
         this.nomeFuncionarios = funcionariosRequest.getNomeFuncionarios();
         this.designacao = funcionariosRequest.getDesignacao();
@@ -45,7 +42,6 @@ public class Funcionarios {
         this.dataHoraDoCadastro = LocalDateTime.now();
 
     }
-
 
     public void altera(FuncionariosAlteracaoResquet funcionariosAlteracaoResquet) {
         this.nomeFuncionarios = funcionariosAlteracaoResquet.getNomeFuncionarios();
